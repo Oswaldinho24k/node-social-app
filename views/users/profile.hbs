@@ -16,7 +16,7 @@
         <p>
           <input type="file" name="image" id="">
         </p>
-        <button type="submit">Editar</button>
+        <input type="submit" value="Guardar">
       </form>
     {{else}}
       <h2>{{user.username}}</h2>
@@ -28,6 +28,12 @@
   </article>
   
   <article>
-    Lista de posts
+    {{#each posts}}
+      <div class="card">
+        <div></div>
+        <img src="{{this.photoURL}}" alt="">
+        <p>{{this.text}}</p>
+      </div>
+    {{/each}}
   </article>
 </section>

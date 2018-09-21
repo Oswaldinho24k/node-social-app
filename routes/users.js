@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 const uploadCloud = require('../helpers/cloudinary')
+const Post = require('../models/Post')
 
 
 //profile
@@ -10,9 +11,15 @@ router.get('/:username',(req, res, next)=>{
   
   User.findOne({username})
     .then(user=>{
-      let owner = false
-      if(user._id==req.user._id) owner=true      
-      res.render('users/profile',{user,owner:owner})
+      Post.find({userId:user._id}).sort('-created_at').populate('userId')
+        .then(posts=>{
+          let owner = false
+          if(user._id==req.user._id) owner=true      
+          res.render('users/profile',{posts:posts,user,owner:owner})
+        }).catch(e=>{
+          res.redirect('/')
+        })
+      
     }).catch(error=>{
       res.redirect('/')
     })

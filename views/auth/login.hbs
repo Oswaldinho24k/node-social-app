@@ -1,15 +1,18 @@
-<section>
-  <div>{{error}}</div>
-  <form action="/login" method="post">    
-    <p>
-      Email:
-      <input type="email" name="email" id="" value="{{data.email}}">
-    </p>
-    <p>
-      Password:
-      <input type="password" name="password" id="" value="{{data.password}}">
-    </p>
-    <input type="submit" value="Inicia">
-  </form>
-  <p>No tienes cuenta? <a href="/signup">crea una 😒</a></p>
+<section class="auth">
+  <div>
+    <h1>Loguini</h1>
+    <p>{{error}}</p>
+    <form action="/login" method="post">    
+      <p>
+        Email:
+        <input type="email" name="email" id="" value="{{data.email}}">
+      </p>
+      <p>
+        Password:
+        <input type="password" name="password" id="" value="{{data.password}}">
+      </p>
+      <input type="submit" value="Inicia">
+    </form>
+    <p>No tienes cuenta? <a href="/signup">crea una 😒</a></p>
+  </div>
 </section>

@@ -7,15 +7,19 @@
       <p>
         <input type="file" name="image" id="">
       </p>
-      <button type="submit">Postea</button>
+      <input type="submit" value="postea">
     </form>
     <div>
-        {{#each posts}}
+    {{#each posts}}
       <div class="card">
-        <div></div>
+        <div>
+          <a href="/users/{{this.user.username}}">
+            <img src="{{this.user.photoURL}}" alt="">
+            <span>{{this.user.username}}</span>
+          </a>          
+        </div>
         <img src="{{this.photoURL}}" alt="">
-        <p>{{this.text}}</p>
-
+        <div>{{this.text}}</div>
       </div>
     {{/each}}
     </div>

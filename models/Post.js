@@ -5,7 +5,10 @@ const Schema = mongoose.Schema
 
 const postSchema = new Schema({
   text:String,
-  userId:Schema.Types.ObjectId,
+  user:{
+    type:Schema.Types.ObjectId,
+    ref:'User'
+  },
   photoURL:String
 },{
   timestamps:{
