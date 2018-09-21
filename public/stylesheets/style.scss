@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+}
+body {  
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0 5%;  
+  height:95vh;
+  width: 100%;
+}
+
+input{
+  width:100%;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.2);
+  padding:2%;
+}
+textarea{
+  padding:2%;
+  width:100%;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.2)
+}
+button{
+  padding:2%;
+  cursor: pointer;
+  width:100%;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.2)
+}
+
+a {
+  color: #00B7FF;
+}
+/**********auth forms*****************/
+.auth-form{
+
+}
+/********profile section*******/
+.profile{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+//info
+.profile article:nth-child(1){
+  padding:2%;
+  width:35%;
+  height: 95vh;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+  text-align: center;
+  
+}
+.profile article:nth-child(1) img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border:2px solid #000;
+}
+
+
+//profile posts
+.profile article:nth-child(2){
+  width:55%;
+  height: 90vh;
+  overflow-y: scroll;  
+}
+.profile article:nth-child(2)::-webkit-scrollbar{
+  display: none;
+}
+
+
+/*********posts list********/
+
+.posts{
+  margin: 0;
+  height: 90vh;
+  overflow-y: scroll;
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.posts article{
+  width: 40%;  
+}
+//posts form
+
+
+
+
+/******* card *********/
+.card{
+  width: 100%;    
+}
+.card img{
+  width: 100%;
+  overflow: hidden;
+
+}

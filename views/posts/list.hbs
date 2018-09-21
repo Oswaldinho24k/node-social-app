@@ -1,0 +1,23 @@
+<section class="posts">
+  <article>
+    <form action="/posts" method="post" enctype="multipart/form-data">
+      <p>
+        <textarea name="text" id="" rows="2" placeholder="Qué hay de nuevo viejo?"></textarea>
+      </p>
+      <p>
+        <input type="file" name="image" id="">
+      </p>
+      <button type="submit">Postea</button>
+    </form>
+    <div>
+        {{#each posts}}
+      <div class="card">
+        <div></div>
+        <img src="{{this.photoURL}}" alt="">
+        <p>{{this.text}}</p>
+
+      </div>
+    {{/each}}
+    </div>
+  </article>
+</section>

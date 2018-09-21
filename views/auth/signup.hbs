@@ -1,0 +1,23 @@
+<section>
+  <div>{{error}}</div>
+  <form action="/signup" method="post">
+    <p>
+      Username:
+      <input type="text" name="username" id="" value="{{data.username}}">
+    </p>
+    <p>
+      Email:
+      <input type="email" name="email" id="" value="{{data.email}}">
+    </p>
+    <p>
+      Password:
+      <input type="password" name="password" id="" value="{{data.password}}">
+    </p>
+    <p>
+      Password:
+      <input type="password" name="password2" id="" value="{{data.password2}}">
+    </p>
+    <input type="submit" value="Regístrate">
+  </form>
+  <p>Ya tienes cuenta? <a href="/login">Sakese</a></p>
+</section>

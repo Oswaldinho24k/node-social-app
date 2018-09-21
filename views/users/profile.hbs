@@ -1,0 +1,33 @@
+<section class="profile">
+  <article>
+    {{#if user.photoURL}}
+      <img src="{{user.photoURL}}" alt="">
+    {{else}}
+      <img src="https://data.whicdn.com/images/58454140/original.gif" alt="">
+    {{/if}}
+    {{#if owner}}
+      <form action="/users/{{user.username}}" method="post" enctype="multipart/form-data">
+        <p>
+          <input type="text" name="username" id="" value="{{user.username}}">
+        </p>
+        <p>
+          <input type="email" name="email" id="" value="{{user.email}}">
+        </p>
+        <p>
+          <input type="file" name="image" id="">
+        </p>
+        <button type="submit">Editar</button>
+      </form>
+    {{else}}
+      <h2>{{user.username}}</h2>
+      <h4>{{user.email}}</h4>
+      <p>Following:0</p>
+      <p>Followers:0</p>
+      <button>Follow</button>
+    {{/if}}
+  </article>
+  
+  <article>
+    Lista de posts
+  </article>
+</section>
