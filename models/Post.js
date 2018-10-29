@@ -16,5 +16,10 @@ const postSchema = new Schema({
     createdAt:"created_at"
   }
 })
+/*
+
+
+:O justo lo quye utilizo en allende
+*/
 
 module.exports = mongoose.model('Post', postSchema)
